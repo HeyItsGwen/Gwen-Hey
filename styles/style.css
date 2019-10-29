@@ -2,3 +2,71 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+  margin: 0;
+}
+
+/* NAV */
+
+nav {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(206, 255, 255);
+  position: fixed;
+  top: 0;
+  border-bottom: 2px solid grey;
+}
+
+/* MAIN */
+
+
+
+/* BANNER */
+
+#stickyImage {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/bannerImage.png);
+  background-size: cover;
+  background-position-x: right;
+  position: fixed;
+  z-index: -1;
+  top: 35px;
+}
+
+#bannerText {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(206, 255, 255);
+}
+
+#bannerText h1 {
+  font-size: 4em;
+}
+
+#bannerTextP,
+#bannerTextSecond,
+#bannerTextLast {
+  position: relative;
+
+}
+
+#bannerTextP {
+  left: -80px;
+}
+
+#bannerTextSecond {
+  left: 75px;
+}
+
+#bannerTextLast {
+  left: 140px;
+}
+

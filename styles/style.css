@@ -46,6 +46,10 @@ nav {
   padding-top: 10px;
 }
 
+#navLinks a {
+  margin-right: 10px;
+}
+
 /* MAIN */
 
 /* BANNER */
@@ -436,4 +440,20 @@ footer p:nth-child(2) {
     flex-direction: column;
     border-top: 1px solid white;
   }
+}
+
+@media only screen and (max-width: 405px) {
+  #navName {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  #navLinks {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-right: 0;
+  }
+
 }

@@ -123,7 +123,7 @@ article:hover {
 
 #projects::before,
 #contact h1::before,
-#about h1::before {
+#aboutText h1::before {
   content: '';
   width: 100px;
   border-bottom: 1px solid rgb(255, 178, 35);
@@ -131,7 +131,8 @@ article:hover {
   margin: auto;
 }
 
-#projects h1 {
+#projects h1,
+#about h1 {
   font-size: 3em;
   margin: 18px;
   margin-bottom: 25px;
@@ -139,7 +140,8 @@ article:hover {
 }
 
 #projects h1::after,
-#contact h1::after {
+#contact h1::after,
+#aboutText h1::after {
   content: '';
   display: block;
   border-bottom: 1px solid rgb(255, 178, 35);
@@ -223,8 +225,12 @@ figcaption {
   padding-right: 15px;
 }
 
+.captionRight2 a {
+  padding-right: 0;
+}
+
 .captionLeft a {
-  padding-left: 15px;
+  padding-left: 41px;
 }
 
 .projectRight {
@@ -253,7 +259,47 @@ figcaption {
 /* ABOUT */
 
 #about {
-  z-index: 4;
+  position: relative;
+  top: 50px;
+  background-color: white;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#aboutText {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#aboutText h1::before {
+  margin-bottom: 20px;
+}
+
+#aboutText h1 {
+  margin-top: 30px;
+}
+
+#aboutText p:nth-child(2) {
+  width: 300px;
+  align-self: flex-start;
+  border-bottom: 1px solid rgb(255, 178, 35);
+  border-left: 1px solid rgb(255, 178, 35);
+  padding: 10px;
+}
+
+#aboutText p:nth-child(3) {
+  text-align: right;
+  width: 300px;
+  align-self: flex-end;
+  border-right: 1px solid rgb(255, 178, 35);
+  border-top: 1px solid rgb(255, 178, 35);
+  padding: 10px;
+  position: relative;
+  top: -33px;
 }
 
 /* CONTACT */
@@ -279,7 +325,7 @@ figcaption {
 
 #contactInfo h1 {
   font-size: 3em;
-  margin: 40px 18px 25px 18px;
+  margin: 0 18px 25px 18px;
   color: rgb(110, 110, 110);
 }
 

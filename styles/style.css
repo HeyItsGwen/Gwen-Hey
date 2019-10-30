@@ -56,7 +56,7 @@ nav {
 
 #stickyImage {
   width: 100%;
-  height: 500px;
+  height: 400px;
   display: flex;
   justify-content: center;
   background-image: url(../images/bannerImage.png);
@@ -69,7 +69,7 @@ nav {
 
 #bannerText {
   width: 100%;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;

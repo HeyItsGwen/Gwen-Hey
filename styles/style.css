@@ -3,6 +3,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  color: rgb(206, 255, 255);
+}
+
+a:visited {
+  color: rgb(255, 178, 35);
+}
+
 body {
   margin: 0;
 }
@@ -15,12 +23,11 @@ nav {
   background-color: rgb(206, 255, 255);
   position: fixed;
   top: 0;
-  border-bottom: 2px solid grey;
+  border-bottom: 1px solid rgb(255, 178, 35);
+  z-index: 3;
 }
 
 /* MAIN */
-
-
 
 /* BANNER */
 
@@ -49,6 +56,8 @@ nav {
 
 #bannerText h1 {
   font-size: 4em;
+  border-bottom: 1px solid rgb(255, 178, 35);
+  padding-bottom: 25px;
 }
 
 #bannerTextP,
@@ -59,14 +68,187 @@ nav {
 }
 
 #bannerTextP {
+  top: -20px;
   left: -80px;
+  overflow: wrap;
 }
 
 #bannerTextSecond {
-  left: 75px;
+  left: 60px;
 }
 
 #bannerTextLast {
   left: 140px;
 }
 
+/* PROJECTS */
+
+#projects {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: auto;
+  top: 70px;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  clear: both;
+}
+
+article:hover {
+  background-color: rgb(227, 255, 255);
+}
+
+#projects a {
+  text-decoration: none;
+}
+
+#projects::before {
+  content: '';
+  width: 100px;
+  border-bottom: 1px solid rgb(255, 178, 35);
+  display: block;
+  margin: auto;
+}
+
+#projects h1 {
+  font-size: 3em;
+  margin: 18px;
+  margin-bottom: 25px;
+  color: rgb(110, 110, 110);
+}
+
+#projects h1::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid rgb(255, 178, 35);
+  position: relative;
+  top: 25px;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 150px;
+}
+
+#projects h2 {
+  color: rgb(110, 110, 110);
+  font-weight: lighter;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.firstProject::before {
+  content: '';
+  display: block;
+  width: 10%;
+  border-bottom: 1px solid rgb(255, 178, 35);
+}
+
+.project h2 {
+  margin-bottom: 0;
+}
+
+figure {
+  text-align: left;
+  width: 400px;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+figure img {
+  width: 100%;
+  border-bottom: 2px solid rgb(184, 255, 255);
+  margin-bottom: 4px;
+}
+
+figcaption {
+  margin-bottom: 4px;
+  color: rgb(110, 110, 110);
+}
+
+.projectLeft {
+  border-left: 1px solid rgb(255, 178, 35);
+  border-bottom: 1px solid rgb(255, 178, 35);
+  align-items: flex-start;
+}
+
+.projectLeft h2 {
+  padding-left: 14px;
+}
+
+.projectRight h2 {
+  padding-right: 14px;
+}
+
+.captionRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.captionLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.captionRight a,
+.captionLeft a {
+  padding-bottom: 20px;
+}
+
+.captionRight a {
+  padding-right: 15px;
+}
+
+.captionLeft a {
+  padding-left: 15px;
+}
+
+.projectRight {
+  border-right: 1px solid rgb(255, 178, 35);
+  border-bottom: 1px solid rgb(255, 178, 35);
+  align-items: flex-end;
+}
+
+.projectRight figcaption {
+  text-align: right;
+}
+
+#moreProjects {
+  border-right: 1px solid rgb(255, 178, 35);
+}
+
+#moreProjects::after {
+  content: '';
+  display: block;
+  width: 78%;
+  border-bottom: 1px solid rgb(255, 178, 35);
+  position: relative;
+  right: -110px;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 502px) {
+  .projectLeft,
+  .projectRight {
+    align-items: center;
+  }
+
+  #moreProjects::after {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  figcaption {
+    width: 90%;
+    margin: auto;
+  }
+}
